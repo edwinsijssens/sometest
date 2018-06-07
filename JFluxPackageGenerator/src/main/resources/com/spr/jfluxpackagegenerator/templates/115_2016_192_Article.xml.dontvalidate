@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Article PUBLIC "-//Springer-Verlag//DTD A++ V2.4//EN" "http://devel.springer.de/A++/V2.4/DTD/A++V2.4.dtd">
+<Article ID="1234" OutputMedium="Online">
+<ArticleHeader>
+<PageHeaders>
+			<RunningTitle>Ramzi Touchan spring/summer precipitation for the Eastern Mediterranean from tree-ring widths</RunningTitle>
+</PageHeaders>
+<Abstract ID="Abs1" Language="En">
+			<Heading>Abstract</Heading>
+			<Para>Indian population, comprising of more than a billion people, consists of 4693 communities with several thousands of endogamous groups, 325 functioning languages and 25 scripts. To address the questions related to ethnic diversity, migrations, founder populations, predisposition to complex disorders or pharmacogenomics, one needs to understand the diversity and relatedness at the genetic level in such a diverse population.</Para>
+		</Abstract>
+		<KeywordGroup Language="En">
+			<Heading>Keywords</Heading>
+			<Keyword>Indian population</Keyword>
+			<Keyword>Ethnicity</Keyword>
+		</KeywordGroup>
+		
+		<ArticleNote Type="Misc">
+		<SimplePara>The online version of the original article can be found under doi:<ExternalRef><RefSource>10.1007/s10633-017-9573-2</RefSource>                    
+<RefTarget Address="10.1007/s10633-017-9573-2" TargetType="DOI"/>
+</ExternalRef>.
+</SimplePara>
+</ArticleNote>
+		
+</ArticleHeader>
+	<Body>
+		<Section1 ID="Sec1" Type="Introduction">
+			<Heading>Introduction</Heading>
+			<Para>Malignant fibrous histiocytoma, now termed high-grade undifferentiated pleomorphic sarcoma, is a term used to refer to a group of malignant soft-tissue tumors characterized by a storiform or cartwheel-like growth pattern This lesion is the most common malignant soft-tissue tumor of adult life, representing approximately 25% of all soft sarcomas. 
+			The Table element in the A++ XML file is missing some values, please replace the current Table element with this one:
+		<Table ID="Tab2" Float="No" colsep="1" rowsep="1">
+					<Caption Language="En">
+						<CaptionNumber>Table 2.</CaptionNumber>
+						<CaptionContent>
+							<SimplePara>Stability constants of the Mn(II) complexes
+			<Superscript>a</Superscript>
+							</SimplePara>
+						</CaptionContent>
+					</Caption>
+					<tgroup cols="5" colsep="1" rowsep="1">
+						<colspec colname="c0" colnum="0" colwidth="5" colsep="1" rowsep="1"/>
+						<colspec colname="c1" colnum="1"/>
+						<colspec colname="c2" colnum="2"/>
+						<colspec colname="c3" colnum="3"/>
+						<colspec colname="c4" colnum="4"/>
+						<thead valign="top">
+							<row>
+								<entry colname="c0" align="left" colsep="1" rowsep="1" valign="top">
+									<SimplePara>a</SimplePara>
+								</entry>
+								<entry colname="c1" align="left">
+									<SimplePara>EDTA(BOM)</SimplePara>
+								</entry>
+								<entry colname="c2" align="left">
+									<SimplePara>EDTA(BOM)<Subscript>2</Subscript>
+									</SimplePara>
+								</entry>
+								<entry colname="c3" align="left">
+									<SimplePara>EDTA</SimplePara>
+								</entry>
+								<entry colname="c4" align="left">
+									<SimplePara>DO3A(BOM)<Subscript>3</Subscript>
+									</SimplePara>
+								</entry>
+							</row>
+						</thead>
+						<tbody valign="top">
+							<row rowsep="1" valign="top">
+								<entry colname="c0" align="left">
+									<SimplePara>Log<Emphasis Type="Italic">K</Emphasis>
+										<Subscript>MnL</Subscript>
+									</SimplePara>
+								</entry>
+								<entry colname="c1" align="left">
+									<SimplePara>13.5(7)</SimplePara>
+								</entry>
+								<entry colname="c2" align="left">
+									<SimplePara>13.8(9)</SimplePara>
+								</entry>
+								<entry colname="c3" align="left">
+									<SimplePara>13.88(8)<Superscript>b</Superscript>
+									</SimplePara>
+								</entry>
+								<entry colname="c4" align="left">
+									<SimplePara>18.8(8)</SimplePara>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+					<tfooter>
+						<SimplePara>
+							<Superscript>a</Superscript>Estimated standard deviations in 
+			parentheses</SimplePara>
+					</tfooter>
+				</Table>
+The undifferentiated pleomorphic sarcoma will demonstrate a wide range of histological 	<ExternalRef>
+					<RefSource>http://facs.scripps.edu</RefSource>
+					<RefTarget Address="http://facs.scripps.edu" TargetType="URL"/>
+				</ExternalRef>
+appearances, and is often further subclassified, although in general large and deep lesions have a poorer prognosis </Para>
+			<Para>Desmoid tumors are benign, locally aggressive, soft-tissue tumors that typically arise in association with fascia, aponeurosis and associated muscle. Often termed musculoaponeurotic fibromatosis, these non-metastasizing lesions show an infiltrative pattern of growth and a significant predilection for local recurrence. We report the extremely unusual association of an undifferentiated pleomorphic sarcoma arising within a desmoid tumor in a patient with Milroy's disease (chronic hereditary lymphedema of unknown origin). To our knowledge, there have been no similar previous reports.</Para>
+			<Para ID="Par1">All I've got to do is pass as an ordinary human being. Simple. What could possibly go wrong? Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you? I'm the Doctor, I'm worse than everyone's aunt. And that is not how I'm introducing myself.</Para>
+			<FormalPara ID="FPar1" RenderingStyle="Style1">
+				<Heading>Far away</Heading>
+				<Para>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text  listen.<CitationRef CitationID="CR1">1</CitationRef>
+				<InlineEquation ID="IEq1">
+<EquationSource Format="TEX"><![CDATA[$$\bar{{v}}({\varvec{p}})={\varvec{{\fancyscript{F}}}}[v({\varvec{r}})]$$]]></EquationSource>
+<EquationSource Format="MATHML"><![CDATA[
+]]><math xmlns:xlink="http://www.w3.org/1999/xlink">
+<mrow>
+<mover accent="true">
+<mrow>
+<mi>v</mi>
+</mrow>
+<mrow>
+<mo stretchy="false">¯</mo>
+</mrow>
+</mover>
+<mo stretchy="false">(</mo>
+<mrow>
+<mi mathvariant="bold-italic">p</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mrow>
+<mi mathvariant="bold-script">F</mi>
+</mrow>
+<mo stretchy="false">[</mo>
+<mi>v</mi>
+<mo stretchy="false">(</mo>
+<mrow>
+<mi mathvariant="bold-italic">r</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">]</mo>
+</mrow>
+</math><![CDATA[
+]]></EquationSource>
+</InlineEquation>
+				</Para>
+			</FormalPara>
+		</Section1>
+	</Body>
+	<BodyRef FileRef="115_2015_188_OnlinePDF.pdf" TargetType="OnlinePDF"/>
+	<BodyRef FileRef="115_2015_192_TEX.zip" TargetType="TEX"/>
+<ArticleBackmatter>
+		<Bibliography ID="Bib1">
+			<Heading>References</Heading>
+			<Citation ID="CR1">
+				<CitationNumber>1</CitationNumber>
+				<BibArticle>
+					<BibAuthorName>
+						<Initials>J</Initials>
+						<FamilyName>Drews</FamilyName>
+					</BibAuthorName>
+					<Year>1300</Year>
+					<ArticleTitle Language="En">Drug discovery: a historical perspective</ArticleTitle>
+					<JournalTitle>Science</JournalTitle>
+					<VolumeID>287</VolumeID>
+					<FirstPage>1960</FirstPage>
+					<LastPage>1964</LastPage>
+				</BibArticle>
+				<BibUnstructured>Drews J: <Emphasis Type="Bold">Drug discovery: a historical perspective.</Emphasis>
+					<Emphasis Type="Italic">Science</Emphasis> 2000, <Emphasis Type="Bold">287:</Emphasis>1960.</BibUnstructured>
+			</Citation>
+		</Bibliography>
+</ArticleBackmatter>
+</Article>

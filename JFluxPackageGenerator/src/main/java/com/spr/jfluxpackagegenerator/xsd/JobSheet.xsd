@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" elementFormDefault="qualified">
+  <xs:element name="JobSheet">
+    <xs:complexType>
+      <xs:choice>
+      <xs:sequence>
+        <xs:element ref="IssueJobSheet"/>
+      </xs:sequence>
+      <xs:sequence>
+        <xs:element ref="ArticleJobSheet"/>
+      </xs:sequence>
+     </xs:choice>
+      <xs:attribute name="Version" type="xs:string"/>
+      <xs:attribute name="JobSheetDate" type="xs:string"/>
+      <xs:attribute name="Supplier" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueJobSheet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PublisherInfo"/>
+        <xs:element ref="JournalInfo"/>
+        <xs:element ref="VolumeInfo"/>
+        <xs:element ref="IssueInfo"/>
+        <xs:element ref="ProductionInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArticleJobSheet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PublisherInfo"/>
+        <xs:element ref="JournalInfo"/>
+        <xs:element ref="ArticleInfo"/>
+        <xs:element ref="AuthorGroup"/>
+        <xs:element ref="ProductionInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublisherInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PublisherName"/>
+        <xs:element ref="PublisherLocation"/>
+        <xs:element ref="PublisherImprintName"/>
+        <xs:element ref="PublisherURL"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublisherName" type="xs:string"/>
+  <xs:element name="PublisherLocation" type="xs:string"/>
+  <xs:element name="PublisherImprintName" type="xs:string"/>
+  <xs:element name="PublisherURL" type="xs:string"/>
+  <xs:element name="JournalInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="JournalID"/>
+        <xs:element ref="JournalPrintISSN"/>
+        <xs:element ref="JournalElectronicISSN"/>
+        <xs:element ref="JournalSPIN"/>
+        <xs:element ref="JournalTitle"/>
+        <xs:element ref="JournalSubTitle"/>
+        <xs:element ref="JournalAbbreviatedTitle"/>
+        <xs:element ref="JournalSubjectGroup"/>
+      </xs:sequence>
+      <xs:attribute name="JournalProductType" type="xs:string" use="required"/>
+      <xs:attribute name="NumberingStyle" type="xs:string" use="required"/>
+      <xs:attribute type="xs:string" name="OutputMedium"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalID" type="xs:string"/>
+  <xs:element name="JournalPrintISSN" type="xs:string"/>
+  <xs:element name="JournalElectronicISSN" type="xs:string"/>
+  <xs:element name="JournalSPIN" type="xs:string"/>
+  <xs:element name="JournalTitle" type="xs:string"/>
+  <xs:element name="JournalSubTitle" type="xs:string"/>
+  <xs:element name="JournalAbbreviatedTitle" type="xs:string"/>
+  <xs:element name="JournalSubjectGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="JournalSubject" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalSubject">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="Type" type="xs:string" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VolumeInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="VolumeIDStart"/>
+        <xs:element ref="VolumeIDEnd"/>
+        <xs:element ref="VolumeIssueCount"/>
+      </xs:sequence>
+      <xs:attribute name="VolumeType" type="xs:string" use="required"/>
+      <xs:attribute name="OutputMedium" type="xs:string" use="required"/>
+      <xs:attribute name="TocLevels" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VolumeIDStart" type="xs:string"/>
+  <xs:element name="VolumeIDEnd" type="xs:string"/>
+  <xs:element name="VolumeIssueCount" type="xs:string"/>
+  <xs:element name="IssueInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IssueIDStart"/>
+        <xs:element ref="IssueIDEnd"/>
+        <xs:element ref="IssueTitle"/>
+        <xs:element ref="IssueArticleCount"/>
+        <xs:element ref="IssueHistory"/>
+        <xs:element ref="IssueCopyright"/>
+      </xs:sequence>
+      <xs:attribute name="IssueType" type="xs:string" use="required"/>
+      <xs:attribute name="OutputMedium" type="xs:string" use="required"/>
+      <xs:attribute name="TocLevels" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueIDStart" type="xs:string"/>
+  <xs:element name="IssueIDEnd" type="xs:string"/>
+  <xs:element name="IssueTitle">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="Language" type="xs:string" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueArticleCount" type="xs:string"/>
+  <xs:element name="IssueHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="OnlineDate"/>
+        <xs:element ref="CoverDate"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CoverDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Year"/>
+        <xs:element ref="Month"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnlineDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Year"/>
+        <xs:element ref="Month"/>
+        <xs:element ref="Day"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Year" type="xs:string"/>
+  <xs:element name="Month" type="xs:string"/>
+  <xs:element name="Day" type="xs:string"/>
+  <xs:element name="IssueCopyright">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CopyrightHolderName"/>
+        <xs:element ref="CopyrightYear"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyrightHolderName" type="xs:string"/>
+  <xs:element name="CopyrightYear" type="xs:string"/>
+  <xs:element name="ProductionInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DiscreteIssueObjectInfo" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="WorkflowInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DiscreteIssueObjectInfo">
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element ref="CoverInfo"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="IssueFrontmatterInfo"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="ArticleInfo"/>
+          <xs:element ref="AuthorGroup"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="IssueBackmatterInfo"/>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attribute name="ID" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="CoverInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CoverFirstPage"/>
+        <xs:element ref="CoverLastPage"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CoverFirstPage" type="xs:string"/>
+  <xs:element name="CoverLastPage" type="xs:string"/>
+  <xs:element name="IssueFrontmatterInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IssueFrontmatterFirstPage"/>
+        <xs:element ref="IssueFrontmatterLastPage"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueFrontmatterFirstPage" type="xs:string"/>
+  <xs:element name="IssueFrontmatterLastPage" type="xs:string"/>
+  <xs:element name="ArticleInfo">
+    <xs:complexType>
+        <xs:sequence>
+          <xs:element ref="ArticleID"/>
+          <xs:element ref="ArticleExternalID" minOccurs="0"/>
+          <xs:element ref="ArticleDOI"/>
+          <xs:element ref="ArticleCitationID" minOccurs="0"/>
+          <xs:element ref="ArticleSequenceNumber"/>
+          <xs:element ref="ArticleRelatedObject"/>
+          <xs:element ref="ArticleSuperTitle" minOccurs="0"/>
+          <xs:element ref="ArticleTitle"/>
+          <xs:element ref="ArticleSubTitle" minOccurs="0"/>
+		  <xs:element ref="ArticleClassification" minOccurs="0"/>
+		  <xs:element ref="ArticleCategory" minOccurs="0"/>
+		  <xs:element ref="ArticleSubCategory" minOccurs="0"/>
+		  <xs:element ref="ArticleCollection" minOccurs="0"/>
+          <xs:element ref="ArticleFirstPage"/>
+          <xs:element ref="ArticleLastPage"/>
+          <xs:element ref="ArticleHistory"/>
+          <xs:element ref="ArticleEditorialResponsibility" minOccurs="0"/>
+          <xs:element ref="ArticleFundingInformation" minOccurs="0"/>
+          <xs:element ref="ArticleCopyright"/>
+          <xs:element ref="ArticleGrants" minOccurs="0"/>
+          <xs:element ref="ArticleContext"/>
+        </xs:sequence>
+      <xs:attribute name="Language" type="xs:string" use="required"/>
+      <xs:attribute name="ArticleType" type="xs:string" use="required"/>
+      <xs:attribute name="TocLevels" type="xs:string" use="required"/>
+      <xs:attribute name="NumberingStyle" type="xs:string" use="required"/>
+      <xs:attribute name="ContainsESM" type="xs:string" use="required"/>
+      <xs:attribute type="xs:string" name="ArticleCitation"/>
+      <xs:attribute type="xs:string" name="OutputMedium"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArticleID" type="xs:string"/>
+  <xs:element name="ArticleExternalID">
+    <xs:complexType>
+       <xs:simpleContent>
+         <xs:extension base="xs:string">
+           <xs:attribute type="xs:string" name="Type"/>
+         </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArticleDOI" type="xs:string"/>
+  <xs:element type="xs:string" name="ArticleCitationID"/>
+  <xs:element name="ArticleSequenceNumber" type="xs:string"/>
+  <xs:element name="ArticleRelatedObject">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element type="xs:string" name="RelatedObjectDOI"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="RelatedObjectType"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArticleSuperTitle">
+    <xs:complexType>
+        <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute type="xs:string" name="Language"/>
+            <xs:attribute type="xs:string" name="OutputMedium"/>
+        </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArticleTitle">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="Language" type="xs:string" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArticleSubTitle">
+    <xs:complexType>
+        <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute type="xs:string" name="Language"/>
+            <xs:attribute type="xs:string" name="OutputMedium"/>
+        </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArticleClassification">
+    <xs:complexType>
+        <xs:sequence>
+        <xs:element name="ClassificationGroup">
+            <xs:complexType>
+                <xs:sequence>
+                   <xs:element name="CharacteristicValue" maxOccurs="unbounded" minOccurs="0">
+                        <xs:complexType>
+                        <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="Characteristic" use="optional"/>
+                        </xs:extension>
+                        </xs:simpleContent>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element type="xs:string" name="ArticleCategory"/>
+  <xs:element type="xs:string" name="ArticleSubCategory"/>
+  <xs:element name="ArticleCollection">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element type="xs:string" name="ArticleCollectionTitle"/>
+            <xs:element type="xs:string" name="ArticleCollectionEditor"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="ID"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArticleFirstPage" type="xs:string"/>
+  <xs:element name="ArticleLastPage" type="xs:string"/>
+                    <xs:element name="ArticleHistory">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="RegistrationDate">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="Year"/>
+                                <xs:element type="xs:string" name="Month"/>
+                                <xs:element type="xs:string" name="Day"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Received">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="Year"/>
+                                <xs:element type="xs:string" name="Month"/>
+                                <xs:element type="xs:string" name="Day"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Revised">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="Year"/>
+                                <xs:element type="xs:string" name="Month"/>
+                                <xs:element type="xs:string" name="Day"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Accepted">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="Year"/>
+                                <xs:element type="xs:string" name="Month"/>
+                                <xs:element type="xs:string" name="Day"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="OnlineDate">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="Year"/>
+                                <xs:element type="xs:string" name="Month"/>
+                                <xs:element type="xs:string" name="Day"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="ArticleEditorialResponsibility"/>
+                    <xs:element name="ArticleFundingInformation">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Fund" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="FunderName">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:anyURI" name="FundRefID" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="GrantNumber" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="GrantRecipient" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Type" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+  <xs:element name="ArticleCopyright">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CopyrightHolderName"/>
+        <xs:element ref="CopyrightYear"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+                    <xs:element name="ArticleGrants">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="MetadataGrant">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Grant"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="AbstractGrant">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Grant"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="BodyPDFGrant">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Grant"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="BodyHTMLGrant">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Grant"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="BibliographyGrant">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Grant"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="ESMGrant">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Grant"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="Type"/>
+                      </xs:complexType>
+                    </xs:element>
+  <xs:element name="ArticleContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="JournalID"/>
+        <xs:element ref="VolumeIDStart"/>
+        <xs:element ref="VolumeIDEnd"/>
+        <xs:element ref="IssueIDStart"/>
+        <xs:element ref="IssueIDEnd"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AuthorGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Author" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="InstitutionalAuthor" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Affiliation" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Author">
+    <xs:complexType>
+        <xs:sequence>
+          <xs:element ref="AuthorName"/>
+          <xs:element ref="Contact" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="ID" use="optional"/>
+        <xs:attribute type="xs:string" name="AffiliationIDS" use="optional"/>
+        <xs:attribute type="xs:string" name="CorrespondingAffiliationID" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InstitutionalAuthor">
+    <xs:complexType>
+        <xs:sequence>
+          <xs:element ref="InstitutionalAuthorName"/>
+          <xs:element ref="Contact" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="ID" use="optional"/>
+        <xs:attribute type="xs:string" name="AffiliationIDS" use="optional"/>
+        <xs:attribute type="xs:string" name="CorrespondingAffiliationID" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InstitutionalAuthorName" type="xs:string"/>
+  <xs:element name="AuthorName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Prefix"/>
+        <xs:element ref="GivenName" maxOccurs="3" minOccurs="0"/>
+        <xs:element ref="Particle"/>
+        <xs:element ref="FamilyName"/>
+        <xs:element ref="Suffix"/>
+      </xs:sequence>
+      <xs:attribute name="DisplayOrder" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Prefix" type="xs:string"/>
+  <xs:element name="GivenName" type="xs:string"/>
+  <xs:element name="Particle" type="xs:string"/>
+  <xs:element name="FamilyName" type="xs:string"/>
+  <xs:element name="Suffix" type="xs:string"/>
+  <xs:element name="Contact">
+    <xs:complexType>
+        <xs:sequence>
+          <xs:element ref="OrgDivision" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="OrgName"/>
+          <xs:element ref="Street" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="Postbox" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="Postcode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="City" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="State" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="Country" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="Phone" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="Fax" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="Email" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="URL" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Email" type="xs:string"/>
+  <xs:element name="URL" type="xs:string"/>
+  <xs:element name="Affiliation">
+    <xs:complexType>
+        <xs:sequence>
+          <xs:element ref="OrgDivision" minOccurs="0"/>
+          <xs:element ref="OrgName" minOccurs="0"/>
+          <xs:element ref="OrgAddress"/>
+        </xs:sequence>
+      <xs:attribute name="ID" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrgDivision" type="xs:string"/>
+  <xs:element name="OrgName" type="xs:string"/>
+  <xs:element name="OrgAddress">
+    <xs:complexType>
+      <xs:sequence>
+          <xs:element ref="Street" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="Postbox" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="Postcode" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="City" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="State" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="Country" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="URL" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="City" type="xs:string"/>
+  <xs:element name="Postbox" type="xs:string"/>
+  <xs:element name="Postcode" type="xs:string"/>
+                                 <xs:element name="Country">
+						          <xs:complexType>
+						            <xs:simpleContent>
+						              <xs:extension base="xs:string">
+						                <xs:attribute type="xs:string" name="Code"/>
+						              </xs:extension>
+						            </xs:simpleContent>
+						          </xs:complexType>
+						        </xs:element>
+  <xs:element name="State" type="xs:string"/>
+  <xs:element name="IssueBackmatterInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IssueBackmatterFirstPage"/>
+        <xs:element ref="IssueBackmatterLastPage"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueBackmatterFirstPage" type="xs:string"/>
+  <xs:element name="IssueBackmatterLastPage" type="xs:string"/>
+  <xs:element name="WorkflowInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Priority"/>
+        <xs:element ref="Supplier"/>
+      </xs:sequence>
+      <xs:attribute name="TaskType" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Priority">
+    <xs:complexType>
+      <xs:attribute name="Level" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Supplier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ExternalPublisher"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExternalPublisher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CompanyName"/>
+        <xs:element ref="Contact"/>
+        <xs:element ref="ContactPerson"/>
+        <xs:element ref="Deliverables"/>
+        <xs:element ref="FilesToPublisher"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyName" type="xs:string"/>
+  <xs:element name="Street" type="xs:string"/>
+  <xs:element name="Phone" type="xs:string"/>
+  <xs:element name="Fax" type="xs:string"/>
+  <xs:element name="ContactPerson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ContactPersonName"/>
+        <xs:element ref="Contact"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactPersonName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Prefix"/>
+        <xs:element ref="GivenName" maxOccurs="3" minOccurs="0"/>
+        <xs:element ref="Particle"/>
+        <xs:element ref="FamilyName"/>
+        <xs:element ref="Suffix"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Deliverables">
+    <xs:complexType>
+	  <xs:choice>
+      <xs:sequence>
+        <xs:element ref="DeliverablesForCompoundObjects"/>
+      </xs:sequence>
+      <xs:sequence>
+        <xs:element ref="DeliverablesForDiscreteObjects"/>
+      </xs:sequence>
+	  </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeliverablesForCompoundObjects">
+    <xs:complexType>
+      <xs:attribute name="CoverPrintPDF" type="xs:string" use="required"/>
+      <xs:attribute name="CoverFigure" type="xs:string" use="required"/>
+      <xs:attribute name="FrontmatterPrintPDF" type="xs:string" use="required"/>
+      <xs:attribute name="BackmatterPrintPDF" type="xs:string" use="required"/>
+      <xs:attribute name="AdvertisementPrintPDF" type="xs:string" use="required"/>
+      <xs:attribute name="DiscreteContentObjectOnlinePDF" type="xs:string" use="required"/>
+      <xs:attribute name="DiscreteContentObjectPrintPDF" type="xs:string" use="required"/>
+      <xs:attribute name="Pit-Stop-Reports" type="xs:string" use="required"/>
+      <xs:attribute name="DiscreteContentObjectXMLWithBody" type="xs:string" use="required"/>
+      <xs:attribute name="DiscreteContentObjectXMLWithBodyRefsOnly" type="xs:string" use="required"/>
+      <xs:attribute name="DiscreteContentObjectOnlineMediaObjects" type="xs:string" use="required"/>
+      <xs:attribute type="xs:string" name="IssuePrintPDF"/>
+      <xs:attribute type="xs:string" name="CorrectionSheet"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeliverablesForDiscreteObjects">
+    <xs:complexType>
+      <xs:attribute type="xs:string" name="XMLWithBody" use="required"/>
+      <xs:attribute type="xs:string" name="XMLWithBodyRefsOnly" use="required"/>
+      <xs:attribute type="xs:string" name="OnlinePDF" use="required"/>
+      <xs:attribute type="xs:string" name="PrintPDF" use="required"/>
+      <xs:attribute type="xs:string" name="eBookPDF" use="required"/>
+      <xs:attribute type="xs:string" name="TEX" use="required"/>
+      <xs:attribute type="xs:string" name="OnlineMediaObjects" use="required"/>
+      <xs:attribute type="xs:string" name="PrintMediaObjects" use="required"/>
+      <xs:attribute type="xs:string" name="ReferencePDF" use="required"/>
+      <xs:attribute type="xs:string" name="AuthorFeedbackPDF" use="required"/>
+      <xs:attribute type="xs:string" name="DeltaPDF" use="required"/>
+      <xs:attribute type="xs:string" name="CopyrightTransfer" use="required"/>
+      <xs:attribute type="xs:string" name="OpenAccessStatement" use="required"/>
+      <xs:attribute type="xs:string" name="OffprintOrder" use="required"/>
+      <xs:attribute type="xs:string" name="Pit-Stop-Reports" use="required"/>
+      <xs:attribute type="xs:string" name="PRS-Metadata" use="required"/>
+      <xs:attribute type="xs:string" name="Manuscript" use="required"/>
+      <xs:attribute type="xs:string" name="EpsilonPDF" use="required"/>
+      <xs:attribute type="xs:string" name="CorrectionSheet" use="required"/>
+      <xs:attribute type="xs:string" name="PeerReviewPDFs" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="FilesToPublisher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ContentFiles"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContentFiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="File" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="File">
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element ref="AplusplusRootFile"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="Archive"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="RenditionItem"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="Cover"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="WorkItem"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="APageFile"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="MediaObject"/>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attribute name="DiscreteObjectID" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="Cover">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CoverInfo"/>
+        <xs:element ref="CoverFigure"/>
+        <xs:element ref="BodyRef"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CoverFigure">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MediaObject"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AplusplusRootFile">
+    <xs:complexType>
+      <xs:attribute name="FileRef" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Archive">
+    <xs:complexType>
+      <xs:attribute name="FileRef" type="xs:string" use="required"/>
+      <xs:attribute name="Content" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenditionItem">
+    <xs:complexType>
+      <xs:attribute name="FileRef" type="xs:string" use="required"/>
+      <xs:attribute name="TargetType" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkItem">
+    <xs:complexType>
+      <xs:attribute name="FileRef" type="xs:string" use="required"/>
+      <xs:attribute name="ItemType" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="APageFile">
+    <xs:complexType>
+      <xs:attribute name="FileRef" type="xs:string" use="required"/>
+      <xs:attribute name="Position" type="xs:string" use="required"/>
+      <xs:attribute name="Type" type="xs:string" use="required"/>
+      <xs:attribute name="TargetType" type="xs:string" use="required"/>
+      <xs:attribute name="FirstPage" type="xs:string" use="required"/>
+      <xs:attribute name="LastPage" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MediaObject">
+    <xs:complexType>
+      <xs:choice>
+            <xs:sequence>
+               <xs:element ref="DataObject" minOccurs="0" maxOccurs="2"/>
+            </xs:sequence>
+            <xs:sequence>
+               <xs:element ref="ImageObject"/>
+            </xs:sequence>
+            <xs:sequence>
+               <xs:element ref="AudioObject" minOccurs="0" maxOccurs="2"/>
+            </xs:sequence>
+            <xs:sequence>
+               <xs:element ref="VideoObject" minOccurs="0" maxOccurs="2"/>
+            </xs:sequence>
+            <xs:sequence>
+               <xs:element ref="TextObject" minOccurs="0" maxOccurs="2"/>
+            </xs:sequence>
+	  </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataObject">
+    <xs:complexType>
+        <xs:attribute type="xs:string" name="FileRef"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageObject">
+    <xs:complexType>
+      <xs:attribute name="Color" type="xs:string" use="required"/>
+      <xs:attribute name="FileRef" type="xs:string" use="required"/>
+      <xs:attribute name="Format" type="xs:string" use="required"/>
+      <xs:attribute name="Rendition" type="xs:string" use="required"/>
+      <xs:attribute name="Type" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BodyRef">
+    <xs:complexType>
+      <xs:attribute name="FileRef" type="xs:string" use="required"/>
+      <xs:attribute name="TargetType" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AudioObject">
+    <xs:complexType>
+        <xs:attribute type="xs:string" name="FileRef"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VideoObject">
+    <xs:complexType>
+        <xs:attribute type="xs:string" name="FileRef"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TextObject">
+    <xs:complexType>
+        <xs:attribute type="xs:string" name="FileRef"/>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

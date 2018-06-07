@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- This is the default configuration file. Find the common classpath directory 
+	of your web container (usually ${catalina.base}/lib), create the subdirectory 
+	"com/spr/jfluxpackagegenerator/config/" and put there the real configuration 
+	file "Config.xml". -->
+<ns2:config
+	xsi:schemaLocation="http://spr.com/jfluxpackagegenerator/config ../target/generated-resources/schemagen/config.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://spr.com/jfluxpackagegenerator/config">
+
+	<defaultEnvId>Integration</defaultEnvId>
+
+    <destinationDir>/PackageGenerator/destination</destinationDir>
+
+	<ftpServers>
+		<ftpServer>
+			<id>AcceptanceSrv</id>
+			<hostname>senldogo0451.springer-sbm.com</hostname>
+			<port>21</port>
+			<username>jwft4jflux</username>
+			<password>xulfj4tfwj</password>
+		</ftpServer>
+		<ftpServer>
+			<id>DefaultSrv</id>
+			<hostname>ftp.springer.com</hostname>
+			<port>21</port>
+			<username>jflux</username>
+			<password>fjpdapsu</password>
+		</ftpServer>
+	</ftpServers>
+
+	<envsByName>
+		<entry>
+			<key>Acceptance</key>
+			<value>
+				<ftpServerId>AcceptanceSrv</ftpServerId>
+				<dirsByVendor>
+					<entry>
+						<key>SPi</key>
+						<value>/u04/spct/work/JFlux/ImportFromVendor/vendors/spcvdrt2/In/</value>
+					</entry>
+					<entry>
+						<key>SPS</key>
+						<value>/u04/spct/work/JFlux/ImportFromVendor/vendors/spcvdrt1/In/</value>
+					</entry>
+					<entry>
+						<key>Crest</key>
+						<value>/u04/spct/work/JFlux/ImportFromVendor/vendors/acdc4jwft/In/</value>
+					</entry>
+					<entry>
+						<key>LeTeX</key>
+						<value>/u04/spct/work/JFlux/ImportFromVendor/vendors/spcvdrt1/In/</value>
+					</entry>
+				</dirsByVendor>
+			</value>
+		</entry>
+		<entry>
+			<key>Development</key>
+			<value>
+				<ftpServerId>DefaultSrv</ftpServerId>
+				<dirsByVendor>
+					<entry>
+						<key>SPi</key>
+						<value>/Vendors/Development/SPi/In/</value>
+					</entry>
+					<entry>
+						<key>SPS</key>
+						<value>/Vendors/Development/SPS/In/</value>
+					</entry>
+					<entry>
+						<key>Crest</key>
+						<value>/Vendors/Development/Crest/In/</value>
+					</entry>
+					<entry>
+						<key>LeTeX</key>
+						<value>/Vendors/Development/LeTeX/In/</value>
+					</entry>
+				</dirsByVendor>
+			</value>
+		</entry>
+		<entry>
+			<key>Integration</key>
+			<value>
+				<ftpServerId>DefaultSrv</ftpServerId>
+				<dirsByVendor>
+					<entry>
+						<key>SPi</key>
+						<value>/Vendors/Integration/SPi/In/</value>
+					</entry>
+					<entry>
+						<key>SPS</key>
+						<value>/Vendors/Integration/SPS/In/</value>
+					</entry>
+					<entry>
+						<key>Crest</key>
+						<value>/Vendors/Integration/Crest/In/</value>
+					</entry>
+					<entry>
+						<key>LeTeX</key>
+						<value>/Vendors/Integration/LeTeX/In/</value>
+					</entry>
+				</dirsByVendor>
+			</value>
+		</entry>
+		<entry>
+			<key>Staging</key>
+			<value>
+				<ftpServerId>DefaultSrv</ftpServerId>
+				<dirsByVendor>
+					<entry>
+						<key>SPi</key>
+						<value>/Vendors/Staging/SPi/In/</value>
+					</entry>
+					<entry>
+						<key>SPS</key>
+						<value>/Vendors/Staging/SPS/In/</value>
+					</entry>
+					<entry>
+						<key>Crest</key>
+						<value>/Vendors/Staging/Crest/In/</value>
+					</entry>
+					<entry>
+						<key>LeTeX</key>
+						<value>/Vendors/Staging/LeTeX/In/</value>
+					</entry>
+				</dirsByVendor>
+			</value>
+		</entry>
+	</envsByName>
+
+</ns2:config>

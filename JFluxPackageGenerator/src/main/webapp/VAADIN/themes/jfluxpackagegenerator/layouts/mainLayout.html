@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Journal Jobsheet & Package Generator</title>
+<link type="text/css" rel="stylesheet" href="../css/reset.css" />
+<link type="text/css" rel="stylesheet" href="../css/site.css" />
+
+</head>
+
+<body>
+	<div class="mainWrapper">
+			<div>
+			<h3 style="float: left; font-size: 20px; margin: 6px;">Package Generator
+			</h3>
+
+			<div location="BTN_CONFIG" class="floatRight" style="margin: 5px;"></div>
+			<br> <br> <br>
+		</div>
+
+
+		<section id="JobSheetDataContainer" class="clearAll overflowHidden">
+			<div id="JobSheet_StageSelectorDiv" class="floatLeft">
+				<div class="JobSheet_StageSelectorDropDownDiv">
+					<table cellpadding="0" cellpadding="0">
+						<tr>
+							<td>
+								<h3 class="JobSheet_StageSelector_headTxt floatLeft">Stage
+									Selector:</h3>
+							</td>
+							<td><div location="LST_JS_SELECT"></div></td>
+
+							<td>
+								<h3 class="JobSheet_StageSelector_headTxt floatLeft">Vendor
+									:</h3>
+							</td>
+							<td><div location="LST_VENDOR_SELECT"></div></td>
+						</tr>
+						<tr>
+							<td>
+								<h3 class="JobSheet_StageSelector_headTxt floatLeft">Environment
+									:</h3>
+							</td>
+							<td><div location="LST_ENV_SELECT"></div></td>
+							<td>
+								<h3 class="JobSheet_StageSelector_headTxt floatLeft">No. of
+									Articles :</h3>
+							</td>
+							<td><div location="LST_ART_COUNT"></div></td>
+						</tr>
+					</table>
+				</div>
+				<div location="TABSHEET_INFO"></div>
+			</div>
+			<div id="JobSheet_ViewerDiv" class="floatRight">
+				<h3 class="JobSheet_Viewer_headTxt">JobSheet Viewer:</h3>
+				<div class="JobSheetXMLContainer">
+					<div location="JobSheetXMLContainer"></div>
+				</div>
+			</div>
+
+
+		</section>
+
+		<footer id="vivFooter" class="">
+			<h6 id="versionText" class="floatLeft" style="left: 10px;">
+				For any queries please contact ViV Admin - <a
+					href="mailto:vivadmin@springernature.com?Subject=ViV Support Request/Issue: "
+					target="_blank">vivadmin@springernature.com</a>
+			</h6>
+			<h6 id="versionText" class="floatRight" style="right: 15px;">ViV
+				Version 2.12.0 (c) SpringerNature</h6>
+		</footer>
+
+
+	</div>
+
+
+
+
+
+</body>
+</html>

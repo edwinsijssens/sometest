@@ -1,0 +1,9 @@
+@import "site.css";
+@import "reset.css";
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in jfluxpackagegenerator.scss */
+.jfluxpackagegenerator {
+  @include site;
+  @include reset;
+}

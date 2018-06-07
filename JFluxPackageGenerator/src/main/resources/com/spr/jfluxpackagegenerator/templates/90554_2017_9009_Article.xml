@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><Article ID="s10554-017-7001-3" OutputMedium="All">
+<ArticleInfo ArticleType="OriginalPaper" ContainsESM="No" Language="En" NumberingStyle="Unnumbered" TocLevels="0">
+<ArticleID>90554</ArticleID>
+<ArticleDOI>10.1007/s10554-017-7001-3</ArticleDOI>
+<ArticleSequenceNumber>0</ArticleSequenceNumber>
+<ArticleTitle Language="En">10554_2017_7001_Article</ArticleTitle>
+<ArticleHistory>
+<RegistrationDate>
+<Year>2017</Year>
+<Month>2</Month>
+<Day>6</Day>
+</RegistrationDate>
+<OnlineDate>
+<Year>
+<?InsertOnReleaseOF OFYear?>
+</Year>
+<Month>
+<?InsertOnReleaseOF OFMonth?>
+</Month>
+<Day>
+<?InsertOnReleaseOF OFDay?>
+</Day>
+</OnlineDate>
+</ArticleHistory>
+<ArticleCopyright>
+<CopyrightHolderName>Springer Science+Business Media Dordrecht</CopyrightHolderName>
+<CopyrightYear>2017</CopyrightYear>
+</ArticleCopyright>
+<ArticleContext>
+<JournalID>90554</JournalID>
+<VolumeIDStart>
+<?InsertByIssueBuilding VolumeIDStart?>
+</VolumeIDStart>
+<VolumeIDEnd>
+<?InsertByIssueBuilding VolumeIDEnd?>
+</VolumeIDEnd>
+<IssueIDStart>
+<?InsertByIssueBuilding IssueIDStart?>
+</IssueIDStart>
+<IssueIDEnd>
+<?InsertByIssueBuilding IssueIDEnd?>
+</IssueIDEnd>
+</ArticleContext>
+</ArticleInfo>
+<BodyRef FileRef="10554.zip" TargetType="Manuscript"/>
+</Article>
